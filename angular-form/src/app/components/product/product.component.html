@@ -1,0 +1,11 @@
+
+<form #passwordForm="ngForm" (ngSubmit)="checkPassword(passwordForm)" class="bg-amber-50">
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" class="border-4">
+    <button type="submit" class="text-black font-bold bg-fuchsia-700 hover:bg-fuchsia-800 rounded py-2 px-4">Submit</button>
+  </div>
+</form>
+<div *ngIf="passwordChecked">
+  <h1>{{ passwordStrength }}</h1>
+</div>
